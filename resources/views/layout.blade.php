@@ -85,13 +85,125 @@
         }
 
         .text-tracking {
+            font-size: 25px;
             color: #858585;
         }
 
+        #btn-nhap {
+            border: 1px solid #fca901 !important;
+        }
+
+        .form-tracking {
+            background-color: #fca901;
+        }
+
+        .ip-nhapTracking {
+            border: 1px solid #fff;
+            border-color: white;
+            color: white !important;
+            background-color: #fca901;
+            border-radius: 30px !important;
+        }
+
+        #btn-search {
+            color: #fca901;
+            border-radius: 30px;
+        }
+
+        table.table-bordered {
+            border: 1px solid #fca901 !important;
+        }
+
+        table tr {
+            border: 1px solid #fca901 !important;
+        }
+
+        #see-more {
+            border-radius: 30px;
+            background-color: #fca901 !important;
+            color: white;
+            border: 1px solid #fca901;
+        }
+
+        #qt-guihang {
+            background-color: #f5f5f5;
+        }
+
+        #dichvu {
+            background-color: #f5f5f5;
+        }
+
+        .col-custom {
+            float: left;
+        }
+
+        .item-divu {
+            background-color: white;
+        }
+
+        .a-font-size {
+            border-bottom: 1px solid #ddd;
+            font-size: 20px;
+        }
+
+        .a-color {
+            color: #272727 !important;
+        }
+
+        #whychooseme {
+            background-size: cover;
+            background-attachment: fixed;
+            background-image: url('../images/background/section_3_bg.jpg');
+            background-repeat: no-repeat;
+            background-position: 100% 100%;
+            position: relative;
+        }
+
+        .padding-bt {
+            padding-bottom: 100px 
+        }
+
+        .padding-top {
+            padding-top: 100px;
+        }
+
+        .img_overlay {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            right: 0%; 
+            bottom: 0%;
+            background-color: rgba(0, 0, 0, 0.8) !important;
+        }
+
+        .ed_counter h2 {
+            text-align: center;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 30px;
+            position: relative;
+            margin: 0px;
+            text-transform: uppercase;
+            display: inline-block;
+            color: #ffffff;
+            border: 2px dashed #ffffff;
+            width: 125px;
+            height: 125px;
+            line-height: 125px;
+            border-radius: 100%;
+            margin-bottom: 10px;
+            transition: all 0.3s;
+        }
+        .ed_counter h4{
+            color: white;
+            text-transform:capitalize
+        }
     </style>
 </head>
 
 <body>
+    {{-- header --}}
     <div class="container-fluid">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -205,6 +317,7 @@
 
         </div>
     </div>
+    {{-- body --}}
     <div class="container-fluid">
         <div class="container">
             <div class="row p-3 mt-5">
@@ -222,13 +335,231 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="row">
+                        <div class="col-md-11 col-sm-11">
+                            <p class="text-tracking ml-5"><img src="../images/icons/ar-right.jpg" alt="">Kiện hàng của
+                                tôi
+                                nặng
+                                bao nhiêu?</p>
+                            <p class="text-tracking ml-5"><img src="../images/icons/ar-right.jpg" alt="">Tình trạng hàng
+                                hóa
+                                đang
+                                ở đâu?</p>
+                            <p class="text-tracking ml-5"><img src="../images/icons/ar-right.jpg" alt="">Làm thế nào để
+                                tự
+                                mình
+                                kiểm tra?</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 offset-md-3 mt-5">
+                            <a class="border p-3 text-center ml-4" id="btn-nhap"><span>NHẬP NGAY</span></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 offset-md-4 mt-5 ">
+                            <a class=" p-3 "><i class="transition fa fa-hand-o-down fa-2x"></i></a>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="form-tracking rounded w-100">
+                            <form action="" method="POST" class="p-4">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-4 ml-5">
+                                    <h4 style="color: white;">Vui Lòng Nhập Tracking</h4>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ml-5 d-inline-flex mt-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control ip-nhapTracking"
+                                            placeholder="Nhập Tracking.....">
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 ml-5">
+                                        <div class="form-group">
+                                            <button type="submit" class="form-control w-100 p-2" id="btn-search">Tìm
+                                                kiếm</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-2" style="display:none">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered" style="text-align: center;">
+                        <thead>
+                            <tr>
+                                <th style="text-align: center;">ID</th>
+                                <th style="text-align: center;">Cân Nặng(kg)</th>
+                                <th style="text-align: center;">Thể Tích(kg)</th>
+                                <th style="text-align: center;">Người Gửi</th>
+                                <th style="text-align: center;">Người Nhận</th>
+                                <th style="text-align: center;">SĐT</th>
+                                <th style="text-align: center;">Địa chỉ</th>
+                            </tr>
+                        </thead>
+                        <tbody id="body-table-index">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- body --}}
+    <div class="container-fluid" id="qt-guihang">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-5">
+                    <h3 class="text-center">QUY TRÌNH GỮI HÀNG</h3>
+                    <hr width="15%" color="orange">
+                    <hr width="10%" color="orange">
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="text-center mt-4">
+                        <img class="w-50" src="../images/donggoi/procedu.jpg" alt="">
+                    </div>
+                    <div class="mt-3  text-center">
+                        <a href="#" class="border p-3" style="width:80% !important" id="see-more">Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- body --}}
+    <div class="container-fluid" id="dichvu">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-5">
                     <div class="text-center">
-                        <p class="text-tracking"><img src="../images/icons/ar-right.jpg" alt="">Kiện hàng của tôi nặng
-                            bao nhiêu?</p>
-                        <p class="text-tracking"><img src="../images/icons/ar-right.jpg" alt="">Tình trạng hàng hóa đang
-                            ở đâu?</p>
-                        <p class="text-tracking"><img src="../images/icons/ar-right.jpg" alt="">Làm thế nào để tự mình
-                            kiểm tra?</p>
+                        <h3>DỊCH VỤ CỦA SAIKO EXPRESS</h3>
+                        <hr width="15%" color="orange">
+                        <hr width="10%" color="orange">
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-5">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col-custom ">
+                        <div class="item-divu">
+                            <div>
+                                <img src="../images/dichvu/s2.jpg" alt="item1" class="w-100">
+                            </div>
+                            <div class="text-center p-3">
+                                <h4 class="a-font-size p-2"><a class="a-color" href="course_single.html">KIỂM TRA HÀNG
+                                        HÓA</a></h4>
+                                <p>Mỗi kiện hàng đến Saiko Express sẽ được kiểm tra đầy đủ và đóng lại nguyên kiện. Đảm
+                                    bảo chính xác về số lượng, cân nặng và kích thước thùng hàng.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col-custom ">
+                        <div class="item-divu">
+                            <div>
+                                <img src="../images/dichvu/s4.jpg" alt="item1" class="w-100">
+                            </div>
+                            <div class="text-center p-3">
+                                <h4 class="a-font-size p-2"><a class="a-color" href="course_single.html">ĐÓNG GÓI CHUYÊN
+                                        NGHIỆP</a></h4>
+                                <p>Hỗ trợ khách hàng đóng gói lại hàng hóa chưa đủ tiêu chuẩn vận chuyển. Chi phí đóng
+                                    gói cụ thể Saiko sẽ thông báo tùy theo tình trạng hàng hóa được gửi đến kho.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col-custom ">
+                        <div class="item-divu">
+                            <div>
+                                <img src="../images/dichvu/s1.jpg" alt="item1" class="w-100">
+                            </div>
+                            <div class="text-center p-3">
+                                <h4 class="a-font-size p-2"><a class="a-color" href="course_single.html">BẢO HIỂM HÀNG
+                                        HÓA</a></h4>
+                                <p>Saiko sẵn sàng cung cấp dịch vụ bảo hiểm hàng hóa trong trường hợp mất mát, thất lạc
+                                    để giảm thiểu tối đa rủi ro trong quá trình vận chuyển.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col-custom ">
+                        <div class="item-divu">
+                            <div>
+                                <img src="../images/dichvu/s6.jpg" alt="item1" class="w-100">
+                            </div>
+                            <div class="text-center p-3">
+                                <h4 class="a-font-size p-2"><a class="a-color" href="course_single.html">HÌNH THỨC THANH
+                                        TOÁN</a></h4>
+                                <p>Đa dạng hình thức thanh toán tại Nhật hoặc bên Việt Nam, giúp khách hàng có nhiều sự
+                                    lựa chọn hơn, thuận tiện hơn, phục vụ lợi ích tối đa của khách hàng.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col-custom ">
+                        <div class="item-divu">
+                            <div>
+                                <img src="../images/dichvu/s5.jpg" alt="item1" class="w-100">
+                            </div>
+                            <div class="text-center p-3">
+                                <h4 class="a-font-size p-2"><a class="a-color" href="course_single.html">KHO BÃI HIỆN
+                                        ĐẠI</a></h4>
+                                <p>Đầu tư kho bãi chuyên nghiệp. Mỗi kiện hàng đều được lưu trữ và sắp xếp một cách khoa
+                                    học và logic. Dễ dàng kiểm tra và đối chiếu hàng hóa.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col-custom ">
+                        <div class="item-divu">
+                            <div>
+                                <img src="../images/dichvu/s3.jpg" alt="item1" class="w-100">
+                            </div>
+                            <div class="text-center p-3">
+                                <h4 class="a-font-size p-2"><a class="a-color" href="course_single.html">GIAO HÀNG TẬN
+                                        NƠI</a></h4>
+                                <p>Với mạng lưới liên kết cùng các dịch vụ vận chuyển nội địa Việt Nam, chúng tôi có thể
+                                    chuyển hàng đến địa chỉ người nhận ở tất cả 64 tỉnh thành.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- body --}}
+    <div class="container-fluid w-100 padding-bt padding-top" id="whychooseme">
+        <div class="img_overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="text-center text-light">
+                        <h3>TẠI SAO CHỌN CHÚNG TÔI</h3>
+                        <hr width="15%" color="orange">
+                        <hr width="10%" color="orange">
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="ed_counter">
+                                <h2 class="timer" data-from="0" data-to="3" data-speed="5"></h2>
+                                <h4>3 chuyến/ 1 tuần</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="ed_counter">
+                                <h2 class="timer" data-from="0" data-to="100000" data-speed="500000"></h2>
+                                <h4>Khách hàng Saiko</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="ed_counter">
+                                <h2 class="timer" data-from="0" data-to="980000" data-speed="400000"></h2>
+                                <h4>Số KG đã vận chuyển</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="ed_counter">
+                                <h2 class="timer" data-from="0" data-to="5" data-speed="100"></h2>
+                                <h4>Năm kinh nghiệm</h4>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
